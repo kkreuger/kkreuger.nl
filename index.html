@@ -55,9 +55,10 @@
   }
 
   .kv-eyebrow {
-    font-family: 'Press Start 2P', monospace; font-size: 13px;
+    font-family: 'Press Start 2P', monospace; font-size: clamp(7px, 2.2vw, 13px);
     color: var(--neon-b); margin-top: 64px;
     text-shadow: 0 0 8px rgba(57,240,224,.5);
+    white-space: nowrap;
   }
 
   .kv-logo {
@@ -148,20 +149,21 @@
   }
 
   .kv-footer {
-    margin-top: 56px; font-family: 'Press Start 2P', monospace; font-size: 11px;
-    color: #5a5380; line-height: 2;
+    margin-top: 56px; font-family: 'VT323', monospace; font-size: 20px;
+    color: #7a70a0; line-height: 1.6;
   }
 
   @media (max-width: 560px) {
     .kv-inner { padding: 20px 16px 50px; }
     .kv-status { font-size: 10px; gap: 8px; }
-    .kv-eyebrow { font-size: 11px; margin-top: 40px; }
+    .kv-eyebrow { margin-top: 40px; }
+    .kv-cta-sub { display: none; }
     .kv-board-list { font-size: 18px; }
     .kv-score-row { grid-template-columns: 44px 1fr auto; gap: 10px; padding: 8px 10px; }
     .kv-chip { font-size: 10px; padding: 8px 10px; }
     .kv-cta { padding: 18px 22px; }
     .kv-link { padding: 12px 14px; font-size: 11px; }
-    .kv-footer { font-size: 10px; }
+    .kv-footer { font-size: 17px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -210,7 +212,7 @@
       </div>
 
       <div class="kv-cta-wrap">
-        <a class="kv-cta" href="mailto:kreuger.k@gmail.com">&#9654; PRESS START &middot; GET IN TOUCH</a>
+        <a class="kv-cta" href="mailto:kreuger.k@gmail.com">&#9654; PRESS START<span class="kv-cta-sub"> &middot; GET IN TOUCH</span></a>
         <div class="kv-blink kv-insert">INSERT COIN</div>
       </div>
 
